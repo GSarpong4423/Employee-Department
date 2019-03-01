@@ -42,7 +42,26 @@ fs.readFile('load_dept_names.txt', 'utf8', function(error, data){
     //  console.log(employeeName);
     //  console.log(employeesalaries);
 //   console.log(departmentID);
-})
+
+});
+
+
+fs.readFile('load_dept.emp.txt', 'utf8', function(error, data){
+    if (error) throw error;
+    
+     var cleanEmployeeData = data.replace(/INSERT INTO `employees` VALUES \n/g, "" ); 
+     var employeeDeptDataArray = cleanEmployeeData.split('\n');
+     
+     for (var i = 0; i < employeeDeptDataArray.length; i++{
+         //grab only data in lines with 9999 using slice and positions
+         if(employeeDeptDataArray[i].slice(28,32) == '9999');
+         
+         
+         
+     } )
+    
+    
+});
 
 
 
